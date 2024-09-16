@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "147fa2b0-bf89-4ab3-a92e-87bc37649e8d",
+		"name": "Kittens On Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21095660"
+	},
+	"item": [
+		{
+			"name": "Get All Kittens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/kittens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"kittens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Kitten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mooki",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/laav/Downloads/cat.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/kittens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"kittens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

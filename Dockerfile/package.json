@@ -1,0 +1,11 @@
+{
+    "name": "docker-example",
+    "version": "1.0.0",
+    "author": "Assaf Finkelshtein",
+    "scripts": {
+        "start": "node src/app.js"
+    },
+    "dependencies": {
+        "express": "^4.17.2"
+    }
+}

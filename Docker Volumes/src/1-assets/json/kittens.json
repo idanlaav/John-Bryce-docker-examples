@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Mitsi",
+        "age": "4",
+        "imageName": "1d617d1d-56f4-4460-b9f4-976efeb51c5c.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Kitsi",
+        "age": "5",
+        "imageName": "29da3255-9bbf-4557-9d0e-c9560e21ba60.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Pitsi",
+        "age": "6",
+        "imageName": "39cb9825-8187-493b-bb66-212aa7254f7c.jpg"
+    }
+]

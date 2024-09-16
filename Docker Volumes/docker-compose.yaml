@@ -1,0 +1,52 @@
+
+
+# All services defined:
+services:
+
+
+  # Service name:
+  backend-service:
+
+    # Container name:
+    container_name: backend-container
+
+    # Restart policy (when to restart if crashed/stoped):
+    restart: unless-stopped
+
+    # Image name to build:
+    image: idanlaav/kittens-backend:1.0
+
+    # Image location:
+    build: .
+
+    # Port binding (host-port:container-port):
+    ports:
+      - 3002:3001
+
+    # Volumes:
+    volumes:
+
+      # Host Volume for error logs (host-path:container-path)
+      - /Users/laav/Desktop/ErrorsLog:/app/src/1-assets/logs/errors
+
+      # Anonymous Volume for activities logs
+      - /app/src/1-assets/logs/activities
+
+      # Named Volume
+      - My-kittens-json:/app/src/1-assets/json
+      - My-kittens-json:/app/src/1-assets/images
+
+    # ENViroment:
+    environment:
+      PORT: 3001 
+
+    # start our backend when container started:
+    command:  npm start
+
+# Named Volume List:
+volumes:
+  My-kittens-json:
+  My-kittens-images:
+
+
+

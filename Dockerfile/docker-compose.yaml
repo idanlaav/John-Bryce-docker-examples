@@ -1,0 +1,41 @@
+# docker build -t idanlaav/hello2-backend:1.0 . 
+# docker create --name docker-container -p 3002:3001 idanlaav/hello-backend:1.0 
+
+# All services defined:
+services:
+
+  # Service name:
+  backend-service:
+
+    # Container name:
+    container_name: docker-container3
+
+    # Restart policy (when to restart if crashed/stoped):
+    restart: unless-stopped
+
+    # Image name to build:
+    image: idanlaav/hello3-backend:1.0
+
+    # Image location:
+    build: .
+
+    # Port binding (host-port:container-port):
+    ports:
+      - 3002:3001
+
+    # environment:
+    #   - PORT=3001 
+    #   - CLOUD_SERVICE_PROVIDER=AWS 
+    #   - CLOUD_SUPPORT_EMAIL=support@aws.com
+
+    environment:
+      PORT: 3001 
+      CLOUD_SERVICE_PROVIDER: AWS 
+      CLOUD_SUPPORT_EMAIL: support@aws.com
+
+    # start our backend when container started:
+    command:  npm start
+    
+
+  #  database-serivce:
+  #  frontend-service:
